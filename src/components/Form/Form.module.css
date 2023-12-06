@@ -2,8 +2,8 @@
     @apply flex flex-col text-xs font-bold;
 }
 .input{
-    @apply p-4 border-2 border-grey rounded-md mt-2 font-normal;
+    @apply p-4 border-2 border-grey focus:outline-dark-slate-grey rounded-md mt-2 font-normal;
 }
 .boton{
-    @apply bg-dark-slate-grey text-white w-full py-4 px-8 mt-6 mb-9 rounded-md;
+    @apply bg-dark-slate-grey hover:bg-gradient-to-l bg-primary-tomato to- text-white w-full py-4 px-8 mt-6 mb-9 rounded-md;
 }

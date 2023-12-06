@@ -1,0 +1,15 @@
+.main{
+    @apply mx-5;
+}
+.titulo{
+    @apply font-bold text-3xl mt-7 mb-4;
+}
+.parrafo{
+    @apply mb-5;
+}
+.item{
+    @apply flex mb-2;
+}
+.icono{
+    @apply mr-4;
+}

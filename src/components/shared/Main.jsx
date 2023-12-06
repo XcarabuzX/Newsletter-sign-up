@@ -21,7 +21,7 @@ function Main({ children }) {
           And much more!
         </li>
       </ul>
-      <div>
+      <div className={estilos.contenedorForm}>
         {children}
       </div>
     </main>

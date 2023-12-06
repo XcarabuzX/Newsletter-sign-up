@@ -13,3 +13,6 @@
 .icono{
     @apply mr-4;
 }
+.contenedorForm{
+    @apply mt-6;
+}

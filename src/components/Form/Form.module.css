@@ -5,5 +5,5 @@
     @apply p-4 border-2 border-grey focus:outline-dark-slate-grey rounded-md mt-2 font-normal;
 }
 .boton{
-    @apply bg-dark-slate-grey hover:bg-gradient-to-l bg-primary-tomato to- text-white w-full py-4 px-8 mt-6 mb-9 rounded-md;
+    @apply bg-gradient-to-r from-dark-slate-grey to-dark-slate-grey hover:from-primary-tomato hover:to-secondary-tomato hover:shadow-md hover:shadow-primary-tomato text-white w-full py-4 px-8 mt-6 mb-9 rounded-md;
 }

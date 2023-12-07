@@ -1,45 +1,42 @@
-import { Formik } from "formik";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import estilos from "./Form.module.css";
 function Form() {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .required("Email required")
+        .email("Valid email required"),
+    }),
+    onSubmit: (values) => {
+      console.log(`usted envio: ${values}`);
+    },
+  });
   return (
-    <Formik
-      initialValues={{ email: "" }}
-        
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
-    >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-      }) => (
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email" className={estilos.label}>
-            Email address
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="email@company.com"
-              className={estilos.input}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-          </label>
-          <button className={estilos.boton}>
-            Subscribe to monthly newsletter
-          </button>
-        </form>
-      )}
-    </Formik>
+    <form onSubmit={formik.handleSubmit}>
+      <label htmlFor="email" className={estilos.label}>
+        Email address
+        {formik.touched.email && formik.errors.email ? (
+          <p className={estilos.error}>{formik.errors.email}</p>
+        ) : null}
+      </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email@company.com"
+        className={formik.touched.email && formik.errors.email ? estilos.inputError : estilos.input}
+        value={formik.values.email}
+        onChange={formik.handleChange("email")}
+        onBlur={formik.handleBlur("email")}
+      />
+      <button className={estilos.boton} onClick={() => formik.submitForm()}>
+        Subscribe to monthly newsletter
+      </button>
+    </form>
   );
 }
 

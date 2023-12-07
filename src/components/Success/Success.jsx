@@ -1,7 +1,8 @@
 import IconSuccessSvg from "../../assets/images/icon-success.svg?react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import estilos from './Succes.module.css';
 function Succes() {
+    const navegar = useNavigate();
     const location = useLocation();
     const email = new URLSearchParams(location.search).get("email");
   return (
@@ -12,7 +13,7 @@ function Succes() {
         A confirmation email has been sent to <span className={estilos.bold}>{email}</span>. Please open
         it and click the button inside to confirm your subscription.
       </p>
-      <button className={estilos.dissmis + " boton"}>  Dismiss message </button>
+      <button className={estilos.dissmis + " boton"} onClick={()=>navegar("/")}>  Dismiss message </button>
     </div>
   );
 }

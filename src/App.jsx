@@ -7,12 +7,12 @@ import Main from './components/shared/Main'
 function App() {
 
   return (
-    <>
+    <div className="font-body">
       <Header/>
       <Main>
         <Form/>
       </Main>
-    </>
+    </div>
   )
 }
 

@@ -1,7 +1,10 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 import estilos from "./Form.module.css";
+
 function Form() {
+  const navegar = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -12,7 +15,7 @@ function Form() {
         .email("Valid email required"),
     }),
     onSubmit: (values) => {
-      console.log(`usted envio: ${values}`);
+      navegar(`/success?email=${values.email}`);
     },
   });
   return (
@@ -33,7 +36,7 @@ function Form() {
         onChange={formik.handleChange("email")}
         onBlur={formik.handleBlur("email")}
       />
-      <button className={estilos.boton} onClick={() => formik.submitForm()}>
+      <button className="boton" onClick={() => formik.submitForm()}>
         Subscribe to monthly newsletter
       </button>
     </form>

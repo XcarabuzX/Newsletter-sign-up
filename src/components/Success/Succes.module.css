@@ -1,0 +1,15 @@
+.contenedor{
+    @apply mt-32 mx-5 font-body;
+}
+.titulo{
+    @apply w-48 mt-9;
+}
+.parrafo{
+    @apply mt-6;
+}
+.bold{
+    @apply font-bold;
+}
+.dissmis{
+    @apply mt-44;
+}

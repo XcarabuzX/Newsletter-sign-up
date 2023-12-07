@@ -3,7 +3,7 @@ import IconListSVG from "../../assets/images/icon-list.svg?react";
 function Main({ children }) {
   return (
     <main className={estilos.main}>
-      <h1 className={estilos.titulo}>Stay Updated!</h1>
+      <h1 className="titulo">Stay Updated!</h1>
       <p className={estilos.parrafo}>
         Join 60,000+ product managers receiving monthly updates on:
       </p>

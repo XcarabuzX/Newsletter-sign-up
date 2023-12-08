@@ -7,7 +7,7 @@ function Succes() {
     const email = new URLSearchParams(location.search).get("email");
   return (
     <div className={estilos.contenedor}>
-      <IconSuccessSvg />
+      <IconSuccessSvg className="sm:w-12 sm:mt-2"/>
       <h1 className={estilos.titulo + " titulo"}>Thanks for subscribing!</h1>
       <p className={estilos.parrafo}>
         A confirmation email has been sent to <span className={estilos.bold}>{email}</span>. Please open

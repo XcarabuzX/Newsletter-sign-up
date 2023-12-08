@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL:](https://github.com/XcarabuzX/Newsletter-sign-up)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/XcarabuzX/Newsletter-sign-up)
+- [Live Site URL](https://astounding-daffodil-544bbf.netlify.app/)
 
 ## My process
 
